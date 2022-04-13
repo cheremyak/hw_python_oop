@@ -64,12 +64,12 @@ class Training:
 class Running(Training):
     """Тренировка: бег."""
 
-    COEFF_CALORIE_1 = 18
-    COEFF_CALORIE_2 = 20
+    COEF_CALORIE_1 = 18
+    COEF_CALORIE_2 = 20
 
     def get_spent_calories(self) -> float:
-        return ((self.COEFF_CALORIE_1 * self.get_mean_speed()
-                - self.COEFF_CALORIE_2)
+        return ((self.COEF_CALORIE_1 * self.get_mean_speed()
+                - self.COEF_CALORIE_2)
                 * self.weight / self.M_IN_KM * self.duration
                 * self.MIN_IN_HOUR)
 
