@@ -131,8 +131,7 @@ def read_package(workout_type: str, data: List[int]) -> Training:
                                                'WLK': SportsWalking}
     if workout_type not in workout_data:
         raise ValueError('Некорректный тип тренировки')
-    else:
-        return workout_data[workout_type](*data)
+    return workout_data[workout_type](*data)
 
 
 def main(training: Training) -> None:
